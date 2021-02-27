@@ -1,0 +1,18 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+vectorA =  np.array([3,9])
+vectorB =  np.array([2,4])
+
+c = np.arange(-7,13,0.100)
+
+plt.scatter(c*vectorA[0],c*vectorA[1])
+
+
+plt.xlim(-25,20)
+plt.ylim(-25,20)
+plt.axhline(y=0, color='pink')
+plt.axvline(x=0, color='cyan')
+plt.title('Span of Single vector')
+plt.grid()
+plt.show()
