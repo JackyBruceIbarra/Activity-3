@@ -1,0 +1,21 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+vectorA = np.array([3,1])
+vectorB = np.array([3,-1])
+
+c = np.arange(-3,4,1)
+
+c1, c2 = np.meshgrid(c,c)
+vectorR = vectorA + vectorB
+spanRx = c1*vectorA[0] + c2*vectorB[0]
+spanRy = c1*vectorA[1] + c2*vectorB[1]
+plt.scatter(spanRx,spanRy, s=10, alpha=0.75, color = 'red')
+
+plt.xlim(-20,20)
+plt.ylim(-20,20)
+plt.axhline(y=0, color='cyan')
+plt.axvline(x=0, color='cyan')
+plt.title('Span of Single vector')
+plt.grid()
+plt.show()
